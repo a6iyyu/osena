@@ -1,13 +1,13 @@
-@using Microsoft.AspNetCore.Mvc.RazorPages;
-
 <header class="mx-auto flex h-24 w-[85%] items-center justify-between border-b border-gray-500">
-    <img src="" alt="Osena" class="w-24" />
+    <a asp-area="" asp-page="/">
+        <img src="" alt="Osena" class="w-24" />
+    </a>
     <nav class="flex gap-12 items-center">
         @foreach (var menu in Model.Menus)
         {
             <a
                 asp-area=""
-                asp-page="/Artikel"
+                asp-page="@menu"
                 class="group font-semibold text-slate-800 last:bg-slate-800 last:text-slate-50 last:px-7 last:py-3 last:rounded-md last:transition-all last:duration-300 last:ease-in-out last:hover:bg-slate-700"
             >
                 <span class="lg:bg-gradient-to-r lg:from-slate-800 lg:to-slate-800 lg:bg-[length:0%_0.125rem] lg:bg-left-bottom lg:bg-no-repeat lg:transition-all lg:duration-500 lg:ease-out lg:group-hover:bg-[length:100%_0.125rem]">

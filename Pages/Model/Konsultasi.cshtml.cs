@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 namespace osena.Pages;
 
-public class IndexModel : PageModel
+public class KonsultasiModel : PageModel
 {
     public void OnGet() { }
 }

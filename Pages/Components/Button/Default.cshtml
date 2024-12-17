@@ -1,0 +1,9 @@
+@{
+    var name = ViewData["Name"] as string;
+    var link = ViewData["Link"] as string;
+    var styling = ViewData["Styling"] as string;
+}
+
+<a href="@link" id="@name?.Replace(" ", "-").ToLower()" class="@styling transition-all duration-300 ease-in-out">
+    @name
+</a>

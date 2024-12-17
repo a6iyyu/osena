@@ -15,7 +15,7 @@
     <meta name="twitter:title" content="@ViewData["Title"]" />
     <meta name="twitter:description" content="@ViewData["Description"]" />
     <meta name="twitter:image" content="" />
-    <title>@ViewData["Title"] - osena</title>
+    <title>@ViewData["Title"] | Osena</title>
     <link rel="icon" href="" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -26,13 +26,17 @@
 </head>
 
 <body class="mx-auto overflow-x-hidden max-w-[1440px] bg-[#d7e7e7]">
-    @await Html.PartialAsync("~/Pages/Shared/Header.cshtml", new osena.Pages.Shared.HeaderModel())
+    @{
+        var IsSpecialPage = ViewData["IsSpecialPage"] as bool? ?? false;
+    }
+
+    @if (!IsSpecialPage) @await Html.PartialAsync("~/Pages/Shared/Header/Header.cshtml", new osena.Pages.Shared.Header.HeaderModel())
 
     <main role="main">
         @RenderBody()
     </main>
 
-    @await Html.PartialAsync("~/Pages/Shared/Footer.cshtml", new osena.Pages.Shared.FooterModel())
+    @if (!IsSpecialPage) @await Html.PartialAsync("~/Pages/Shared/Footer/Footer.cshtml", new osena.Pages.Shared.Footer.FooterModel())
     <script src="~/js/site.js" asp-append-version="true"></script>
 
     @await RenderSectionAsync("Scripts", required: false)

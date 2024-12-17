@@ -1,4 +1,50 @@
-<section class="mx-auto flex w-[85%] items-center">
-    <div class=""></div>
-    <div class=""></div>
+<section class="mx-auto mt-14 grid w-[85%] grid-cols-2">
+    <div>
+        <span class="flex items-center text-green-700">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-sparkles"
+            >
+                <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z" />
+                <path d="M20 3v4" />
+                <path d="M22 5h-4" />
+                <path d="M4 17v2" />
+                <path d="M5 18H3" />
+            </svg>
+            <i class="ml-2 cursor-default italic font-semibold text-sm">Mendorong pertumbuhan bisnis Anda</i>
+        </span>
+        <h2 class="mt-4 cursor-default text-5xl font-bold">
+            Kembangkan Bisnis Anda Bersama Kami
+        </h2>
+        <h5 class="mt-4 cursor-default text-lg text-slate-600">
+            Tim ahli kami berdedikasi untuk membantu Anda membuka potensi penuh Anda, memastikan kesuksesan yang dapat
+            dipertahankan di pasar yang kompetitif saat ini.
+        </h5>
+        <span class="mt-8 flex gap-7">
+            @await Component.InvokeAsync("Button", new
+            {
+                name = "Jelajahi Sekarang",
+                styling = "cursor-pointer font-medium rounded-md px-7 py-3.5 bg-green-700 text-slate-50 hover:bg-green-600"
+            })
+
+            @await Component.InvokeAsync("Button", new
+            {
+                name = "Mulai Konsultasi",
+                link = "Konsultasi",
+                styling = "font-medium rounded-md px-7 py-3.5 border-2 border-green-700 text-green-700 hover:bg-green-600 hover:border-green-600 hover:text-slate-50"
+            })
+        </span>
+    </div>
+    <div class="relative">
+        <img src="" alt="" />
+        <span class="absolute" />
+    </div>
 </section>
