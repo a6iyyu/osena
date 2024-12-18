@@ -5,7 +5,10 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="npgsql" Version="9.0.2" />
     <UpToDateCheckBuilt Include="postcss.config.js" Set="CSS" />
+    <PackageReference Include="dotenv.net" Version="3.2.1" />
+    <PackageReference Include="supabase" Version="1.1.1" />
   </ItemGroup>
   <Target Name="Tailwind" BeforeTargets="Build">
     <Exec Command="npm run css:build" />

@@ -1,0 +1,37 @@
+<section class="mx-auto -mt-20 mb-10 w-[85%] grid grid-cols-2 gap-10">
+    <div class="grid grid-cols-2 gap-5">
+        @foreach (var keuntungan in Model.Keuntungan)
+        {
+            <figure class="cursor-default rounded-xl p-6 border-2 border-gray-300/75">
+                <i class="@keuntungan.Styling"></i>
+                <h3 class="mt-3 font-bold text-xl">@keuntungan.Name</h3>
+                <h5 class="mt-2 text-sm">@keuntungan.Description</h5>
+            </figure>
+        }
+    </div>
+    <div class="flex cursor-default flex-col justify-center">
+        <h2 class="font-bold text-slate-800 text-4xl">
+            Jadikan Potensi Bisnis Anda Lebih Besar
+        </h2>
+        <h4 class="mt-4 text-slate-700">
+            Buka peluang baru dengan strategi ahli kami, solusi inovatif, dan dukungan penuh. Mari bersama-sama membawa
+            bisnis Anda ke level berikutnya.
+        </h4>
+        @await Component.InvokeAsync("Button", new
+            {
+                Name = "Pilih Layanan Kami",
+                Link = "Kemitraan",
+                Styling = "mt-4 w-fit font-semibold px-7 py-4 rounded-md bg-slate-800 hover:bg-slate-700 text-white"
+            })
+        <ul class="mt-8 grid grid-cols-2 gap-3">
+            <li class="flex items-center">
+                <i class="fa-solid fa-check"></i>
+                <span class="ml-2 font-semibold text-sm">Komunikasi yang Fleksibel</span>
+            </li>
+            <li class="flex items-center">
+                <i class="fa-solid fa-check"></i>
+                <span class="ml-2 font-semibold text-sm">Respon Cepat</span>
+            </li>
+        </ul>
+    </div>
+</section>
