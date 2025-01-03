@@ -4,10 +4,12 @@ namespace osena.Pages.Core;
 
 public class IndexModel : PageModel
 {
-    public Keuntungan.KeuntunganProps? KeuntunganProps { get; set; }
+    public Keuntungan.Props? Keuntungan { get; set; }
+    public BagaimanaKamiBekerja.Props? BagaimanaKamiBekerja { get; set; }
 
     public void OnGet()
     {
-        KeuntunganProps = new Keuntungan.KeuntunganProps();
+        Keuntungan = new Keuntungan.Props();
+        BagaimanaKamiBekerja = new BagaimanaKamiBekerja.Props();
     }
 }

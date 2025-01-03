@@ -1,0 +1,29 @@
+@model osena.Pages.Components.Beranda.BagaimanaKamiBekerja.Props
+
+<section class="mt-20 mx-auto w-[85%] flex flex-col items-center justify-center">
+    <h2 class="cursor-default font-bold text-2xl lg:text-4xl lg:text-center">
+        Keahlian Bisnis Kami untuk Mendukung
+        <br class="hidden lg:inline" />
+        Kebutuhan Pelanggan
+    </h2>
+    <h5 class="mt-4 cursor-default text-lg lg:text-center">
+        Proses konsultasi dan dukungan dirancang untuk memberikan hasil terbaik bagi bisnis UMKM Anda.
+        <br class="hidden lg:inline" />
+        Yuk pahami bersama bagaimana kami bekerja!
+    </h5>
+    <div class="w-full grid grid-cols-1 gap-4 mt-8 md:grid-cols-2 xl:grid-cols-4">
+        @foreach (var list in Model.BagaimanaKamiBekerja)
+        {
+            <figure id="bagaimana-kami-bekerja-card" class="relative flex flex-col cursor-pointer rounded-lg border-2 px-8 py-7 border-dashed outline-8 transform border-[#87a8a4]">
+                <span class="absolute hidden h-8 w-8 bg-[#16a34a] rounded-full top-0 right-0 translate-x-1/2 -translate-y-1/2"></span>
+                <header class="flex items-center gap-5">
+                    <i class="@list.Icon p-4 rounded-full bg-[#bbf7d0] text-[#16a34a]"></i>
+                    <h4 class="font-bold">@list.Name</h4>
+                </header>
+                <figcaption class="mt-4">
+                    @list.Description
+                </figcaption>
+            </figure>
+        }
+    </div>
+</section>

@@ -2,7 +2,7 @@ namespace osena.Pages.Shared.Sidebar;
 
 public class Sidebar
 {
-    public SidebarProps? _SidebarProps { get; set; }
+    public Props? SidebarProps { get; set; }
 
     public class Metadata
     {
@@ -10,7 +10,7 @@ public class Sidebar
         public string? Title { get; set; }
     }
 
-    public class SidebarProps
+    public class Props
     {
         public List<Metadata> Sidebar { get; set; } =
         [

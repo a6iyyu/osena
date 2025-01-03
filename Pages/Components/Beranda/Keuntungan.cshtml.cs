@@ -2,8 +2,6 @@ namespace osena.Pages.Components.Beranda;
 
 public class Keuntungan
 {
-    public KeuntunganProps? _KeuntunganProps { get; set; }
-
     public class Metadata
     {
         public string? Name { get; set; }
@@ -11,7 +9,7 @@ public class Keuntungan
         public string? Styling { get; set; }
     }
 
-    public class KeuntunganProps
+    public class Props
     {
         public List<Metadata> Keuntungan { get; set; } =
         [

@@ -6,5 +6,7 @@
 }
 
 @await Html.PartialAsync("~/Pages/Components/Beranda/Hero.cshtml")
-<img src="~/img/wave.svg" />
-@await Html.PartialAsync("~/Pages/Components/Beranda/Keuntungan.cshtml", Model.KeuntunganProps)
+<img src="~/img/wave.svg" class="w-full" />
+@await Html.PartialAsync("~/Pages/Components/Beranda/Keuntungan.cshtml", Model.Keuntungan)
+@await Html.PartialAsync("~/Pages/Components/Beranda/BagaimanaKamiBekerja.cshtml", Model.BagaimanaKamiBekerja)
+@await Html.PartialAsync("~/Pages/Components/Beranda/TargetMasaDepan.cshtml")

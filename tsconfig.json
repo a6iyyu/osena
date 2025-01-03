@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "CommonJS",
+    "outDir": "./wwwroot/js",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "ES5",
+    "paths": {
+      "~/*": ["wwwroot/ts/*"]
+    }
+  },
+  "exclude": ["node_modules"],
+  "include": ["./wwwroot/**/*"]
+}
